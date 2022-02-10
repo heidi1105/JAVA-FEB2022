@@ -21,8 +21,15 @@ public class DeveloperTest{
 
         dev1.displayStatus();
         
-        System.out.println("Dev count: " + Developer.getDevCount());
-        System.out.println("Total Salary: " + Developer.getTotalSalary());
+        // System.out.println("Dev count: " + Developer.getDevCount());
+        // System.out.println("Total Salary: " + Developer.getTotalSalary());
 
+        ArrayList<String> toDoList = new ArrayList<String>();
+        toDoList.add("Do Laundry");
+        toDoList.add("Get milk");
+        System.out.println(toDoList);
+
+        String[] testing = {"abc", "ccc" , "bbb"};
+System.out.println(testing);
     }
 }

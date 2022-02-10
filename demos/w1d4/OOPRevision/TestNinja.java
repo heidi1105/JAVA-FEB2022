@@ -12,3 +12,8 @@ public class TestNinja {
         
     }
 }
+
+
+// ERROR IN LINE 7 (private variable)
+// Name : Kikomo
+// Health : 100;
