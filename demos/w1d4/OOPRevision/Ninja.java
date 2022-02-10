@@ -3,6 +3,10 @@ class Ninja {
     private String name;
     private int health;
 
+    public Ninja(){
+        this.name="Ninja";
+    }
+
     public Ninja(String name){
         this.name = name;
         this.health = 100;
