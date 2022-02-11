@@ -57,35 +57,72 @@ class SLL{
   }
 
   // ------------W1D3------------
-  insertAtBack(data){
-        // Create a new node with the given value 
-        // inserts it at the back of the list
-        // HINT: How to find the last node of a Singly Linked List?    
-  }
+      insertAtBack(val){
+        var d = new Node(val);   
+        var runner = this.head;
+        while (runner.next) {      
+          runner = runner.next
+        }
+        runner.next = d;
 
-  removeHead(){
-        // Remove the head (HINT: What will be the new head?)
-  }
+    }
+
+    removeHead(){
+        if(this.head){
+            this.head = this.head.next;
+        }
+    }
 
   // ------------W1D4------------
     contains(data){
-      
+        let runner = this.head;
+        while(runner){
+            if(runner.data == data){
+                return true;
+            }
+        }
+        return false;
+    }
 
+    containsRecrusive(data, curr = this.head){
+        if(!curr){
+            return false        
+        }
+        if(curr.data == data){
+            return true
+        }else{
+            return this.containsRecrusive(data, curr.next)
+        }
     }
 
     removeBack(){
+        if(!this.head){
+            return
+        }
+        let runner = this.head;
+        if(!runner.next){
+            this.head=null;
+        }
+        while(runner.next.next){
+            runner = runner.next;
+        }
+        runner.next =null;
     }
 
-   
-    average(){
-
+     average(){
+        let count = 0;
+        let sum = 0;
+        let runner = this.head;
+        while(runner){
+            sum += runner.val;
+            count++;
+            runner=runner.next;            
+        }
+        return sum/count;
+        // Find the average of all the nodes inside a Singly Linked List
+        // HINT: How to get an average? What information do we need to generate an average?
+        // BONUS: What if one of the nodes stored String instead of int? How do you want to handle that edge case?
     }
-
-    containsRecursive(data, curr=this.head){      
-
-    }
-
-
 
   //given
   printList(){
