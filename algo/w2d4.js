@@ -1,10 +1,17 @@
-class slStack {
+class Node{
+	constructor(data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class SLLStack {
     constructor() {
         this.top = null; 
     }
     // add to top
     push(data) {
-      
+        let newNode = new Node(data);
         if (this.top === null) {
             this.top = newNode;
         } else {
@@ -22,7 +29,7 @@ class slStack {
     }
 
     peek() {
-        return this.top;
+        return this.top.data;
     }
 
     printStack(){
@@ -31,12 +38,6 @@ class slStack {
 
 }
 
-class Node{
-	constructor(data){
-		this.data = data;
-		this.next = null;
-	}
-}
 
 class SLLQueue{
 	constructor(){
