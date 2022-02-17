@@ -33,6 +33,11 @@ class SLLStack {
     }
 
     printStack(){
+      // print every node in the stack (hint: by using push() and pop()
+      // make sure the original stack is back to the original state
+    }
+
+    copyStack(){
       //create a second stack and copy values from the first stack into the second stack, so they are in the same order. 
     }
 
